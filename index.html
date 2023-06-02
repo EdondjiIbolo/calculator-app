@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Frontend Mentor | Calculator app</title>
+
+</head>
+<body>
+<div class="main">
+
+    <header class="header">
+        <p class="header__text">calc</p>
+        <div class="theme">
+            <p class="theme__text">THEME</p>
+            <div class="toggle">
+                <div class="toggle__header">
+                    <p class="theme__text">1</p>
+                    <p class="theme__text">2</p>
+                    <p class="theme__text">3</p>
+                </div>
+                <div id="toggle-switch" class="toggle-switch"></div>
+            </div>
+        </div>
+    </header>
+    <form class="main-container">
+        <header class="main-header">
+            <p class="text-big">0</p>
+        </header>
+       
+
+        <section class="board">
+            <div class="square">7</div>
+            <div class="square">8</div>
+            <div class="square">9</div>
+            <div class="square-del square-dif">DEL</div>
+            <div class="square">4</div>
+            <div class="square">5</div>
+            <div class="square">6</div>
+            <div class="square-sum square">+</div>
+            <div class="square">1</div>
+            <div class="square">2</div>
+            <div class="square">3</div>
+            <div class="square-resta square">-</div>
+            <div class="square">0</div>
+            <div class="square">.</div>
+            <div class="square-div square">/</div>
+            <div class="square-multi square">*</div>
+            <div class="square-reset square-double square-dif">RESET</div>
+            <div class="square-iqual square-double">=</div>
+        </section>
+    </form>
+</div>
+<script src="main.js"></script>
+</body>
+</html>

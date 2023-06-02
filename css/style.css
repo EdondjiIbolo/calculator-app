@@ -1,0 +1,193 @@
+*{
+    box-sizing: border-box
+}
+:root{
+    --bg-cl: hsl(222, 26%, 31%);
+    --primary-cl:  hsl(224, 36%, 15%);
+    --secondary-cl:    hsl(223, 31%, 20%);
+    --third-cl:hsl(268, 71%, 12%);
+    
+    --text-cl:   hsl(0,0%,100%) ;
+    
+    --square-cl: hsl(30, 25%, 89%);
+    --square-text-cl: hsl(221, 14%, 31%);
+    --square-shadow-cl:hsl(28, 16%, 65%);
+    
+    --square-key: hsl(225, 21%, 49%);
+    --square-key-shadow: hsl(224, 28%, 35%);
+    --square-key-color-text: hsl(0, 0%, 100%);
+    
+    --input-color : hsl(0, 0%, 100%);
+    --iqual-color: hsl(25, 98%, 40%) ;
+    --iqual-color-shdow: hsl(25, 99%, 27%);
+    
+    --transform : translatex(0px);
+    
+    
+    --iqual-text-color : hsl(0,0%,100%);
+
+}
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+    background-color: var( --bg-cl);
+    font-family: 'League Spartan', sans-serif;
+    
+}
+@media screen and (min-width:376px){
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+.main{
+    width: 100%;
+    max-width: 400px;
+    margin-inline:auto
+}
+.header{
+
+    max-width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 10px;
+    color: aliceblue
+}
+.theme{
+    display: flex;
+    align-items: flex-end;
+    gap:10px;
+}
+.header__text{
+    font-size: 2rem;
+    margin: 0;
+    color: var(--text-cl);
+    font-weight: 700;
+
+}
+.theme__text{
+    font-size: .75rem;
+    color: var(--text-cl);
+    margin: 0;
+    letter-spacing: 1.2px;
+    font-weight: 400;
+
+}
+.toggle{
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:3px;
+    cursor: pointer
+}
+.toggle__header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap:8px
+}
+.toggle-switch{
+    position: relative;
+    height: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var( --secondary-cl)
+}
+.toggle-switch::after{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 3px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--iqual-color);
+    border-radius: 50%;
+    transition: transform ease-in 200ms;
+    transform: var(--transform)
+}
+.main-container{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.main-header{
+    background-color: var( --primary-cl);
+    padding: 25px 10px; 
+    padding-left: 50px;
+    overflow: hidden;
+    width: 100%;
+    height: 80px;
+    border-radius: 7px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: var( --text-cl);
+    text-align: right
+}
+.text-big{
+    font-size: 2.6rem;
+    margin: 0;
+    margin-left: auto;
+    border: none;
+    outline: none;
+    width: 98%;
+    text-align: right;
+}
+
+.board{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 15px;
+    width: 100%;
+    gap:10px;
+    border-radius: 7px;
+    background-color:var( --secondary-cl);
+}
+.square , .square-del , .square-iqual , .square-reset , .square-div, .square-resta , .square-sum ,.square-multi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    background-color: var(--square-cl);
+    cursor: pointer;
+    box-shadow:inset 0px -5px 0px 0px  var(--square-shadow-cl);
+    color: (--squaretext-cl);
+    text-transform: capitalize;
+    color: var(--square-text-cl);
+    font-size: 1.6rem
+    
+}
+#input::-webkit-inner-spin-button,
+#input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+
+}
+.square-double{
+    grid-column: 1/3
+}
+.square-double:last-child{
+    grid-column: 3/5;
+    color: var(--iqual-text-color);
+    background-color: var(--iqual-color);
+    box-shadow:inset 0px -5px 0px 0px  var(--iqual-color-shdow);
+
+    
+}
+.square-dif{
+    background-color:  var(--square-key);
+    box-shadow:inset 0px -5px 0px 0px  var(--square-key-shadow);
+    color: var(--square-key-color-text);
+}
